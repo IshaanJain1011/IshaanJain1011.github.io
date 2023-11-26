@@ -1,0 +1,259 @@
+<!-- FILEPATH: d:\TUTORIALS\website-building\main.html -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ishaan Jain</title>
+        <link rel="icon" type="image/png" href="assets/img/astronomy.png">
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Added to make the webpage static -->
+        
+        <!-- SEO tags -->
+        <meta name="description" content="Ishaan Jain's personal website.">
+        <meta name="keywords" content="paras, sharma, iit delhi, iitd, stony brook, SBU, astrophysics, cosmology, galaxies, magnetic fields">
+        <meta name="author" content="Ishaan Jain">
+        <style>
+                    /* Style for the parent container */
+                    .container {
+                        display: flex;
+                        flex-direction: row;
+                        margin: 5% 10%;
+                    }
+                    
+                    /* Style for the left panel */
+                    .left-panel {
+                        width: 30%;
+                        padding: 20px;
+                        /* border-radius: 50%; */
+                        overflow: hidden;
+                        /* background-color: #000000; */
+                    }
+                    
+                    /* Style for the right panel */
+                    .right-panel {
+                        width: 70%;
+                        padding: 20px;
+                        /* background-color: #ffffff; */
+                        margin-left: 20px;
+                    }
+                    
+                    /* Style for the photo */
+                    .photo {
+                        width: 100%;
+                        height: auto;
+                        border-radius: 50%;
+                    }
+                    
+                                        
+                    /* Style for the body */
+                    body {
+                        margin: 5%; /* Increased margin */
+                        font-family: Roboto; 
+                        background-image: url("assets/img/domeblur-light.jpg");
+                        background-size: cover;
+                        background-position: center;
+                    }
+                    
+                    /* Style for the name and role */
+                    .name-role {
+                        text-align: center;
+                        margin-top: 20px;
+                    }
+                    
+                    /* Style for the name */
+                    .name {
+                        font-size: 24px;
+                        font-weight: bold;
+                        margin-bottom: 10px;
+                    }
+                    
+                    /* Style for the role */
+                    .role {
+                        font-size: 18px;
+                        font-weight: normal;
+                        margin-bottom: 10px;
+                    }
+                    
+                    /* Media query for smaller screens */
+                    @media only screen and (max-width: 768px) {
+                        .container {
+                            flex-direction: column;
+                            margin: 5% 5%;
+                        }
+
+                        .left-panel {
+                            width: 100%;
+                            align-items: center;
+                        }
+
+                        .right-panel {
+                            width: 100%;
+                            align-items: center;
+                            margin-top: 20px;
+                            align-items: center;
+                            margin-top: 20px;
+                        }
+                    }
+                    
+                    /* Style for the dark mode/light mode button */
+                    .mode-button {
+                        position: absolute;
+                        top: 10px;
+                        right: 10px;
+                        background-color: #ffffff;
+                        color: #000000;
+                        border: none;
+                        border-radius: 5px;
+                        padding: 10px;
+                        cursor: pointer;
+                    }
+                    
+                            
+                    /* Style for the light mode */
+                    .light-mode {
+                        background-color: #ffffff;
+                        color: #000000;
+                    }
+                    
+                    /* Style for the right panel in light mode */
+                    .light-mode .right-panel {
+                        /* background-color: #ffffff; */
+                        color: #000000;
+                    }
+
+                    /* Style for the left panel in light mode */
+                    .light-mode .left-panel {
+                        /* background-color: #ffffff; */
+                        color: #000000;
+                    }
+
+                    /* Style for the dark mode */
+                    .dark-mode {
+                        background-color: #000000;
+                        color: #ffffff;
+                    }
+                    
+                    /* Style for the right panel in dark mode */
+                    .dark-mode .right-panel {
+                        /* background-color: #000000; */
+                        color: #ffffff;
+                    }
+
+                    /* Style for the left panel in dark mode */
+                    .dark-mode .left-panel {
+                        /* background-color: #000000; */
+                        color: #ffffff;
+                    }
+
+                    .body {
+                        margin: 5%; /* Increased margin */
+                        font-family: Roboto; 
+                        background-size: cover;
+                        background-position: center;
+                    }
+
+                    .social {
+                        /* margin: 5%; */
+                        /* border-radius: 6px; */
+                        position: relative;
+                        padding: auto;
+                        overflow: hidden;
+                        width: 100%;
+                        text-align: center;
+                    }
+                    
+                    .social a{
+                        font-size: 30px;
+                        color: #000000;
+                        /* border-style: groove; */
+                        /* border-color: grey; */
+                        /* padding: 10px; */
+                        margin: 10px;
+                        text-decoration: none;
+                        /* border-radius: 6px; */
+                        /* display: inline-block */
+                        text-align: center;
+                    }
+
+                    .dark-mode .social a{
+                        color: #ffffff;
+                    }
+
+                    .social a:hover{
+                        color: rgb(25, 235, 235);
+                        text-decoration: none;
+                    }
+                    p {
+                        font-size: 20px;
+                        font-weight: normal;
+                        margin-bottom: 10px;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: #000000;
+                    }
+
+                    a:hover {
+                        text-decoration: none;
+                        color: rgb(17, 231, 242);
+                    }
+
+                    .dark-mode a {
+                        color: #ffffff;
+                    }
+
+                    .dark-mode a:hover {
+                        color: rgb(44, 225, 248);
+                    }
+
+                </style>
+    </head>
+    <body>
+        <button class="mode-button" onclick="toggleMode()">Light Mode</button>
+        <div class="container">
+            <div class="left-panel">
+                <img class="photo" src="assets/img/photo2.png" alt="Photo">
+                <div class="name-role">
+                    <div class="name">Paras Sharma</div>
+                    <div class="role">Astro Grad @ SBU</div>
+                </div>
+
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
+                <div class="row social" align="center">
+                    <a href="mailto:sharmaparasiitd@gmail.com" class="fa fa-envelope" title="sharmaparasiitd@gmail.com"></a>
+                    <a href="https://www.linkedin.com/in/nutanstrek/s" class="fa fa-linkedin"></a>
+                    <a href="https://github.com/nutanstrek" class="fa fa-github"></a>
+                    <a href="https://twitter.com/time_dilates_me" class="fa fa-twitter"></a>
+                    <a href="https://www.instagram.com/time_dilates_me/" class="fa fa-instagram"></a>
+                </div>
+                
+            </div>
+            <div class="right-panel">
+                <h1>Hi I'm Ishaan!</h1>
+                <p>
+                </p>
+
+                <p></p>
+
+                <p>My latest CV can be found <a href="assets/docs/Ishaan_CV.pdf">here</a>.</p>
+                
+            </div>
+        </div>
+        <script>
+            function toggleMode() {
+                var body = document.getElementsByTagName("body")[0];
+                var button = document.getElementsByClassName("mode-button")[0];
+                if (body.classList.contains("dark-mode")) {
+                    body.classList.remove("dark-mode");
+                    button.innerHTML = "Light Mode";
+                    body.style.backgroundImage = "url('assets/img/domeblur-light.jpg')";
+                } else {
+                    body.classList.add("dark-mode");
+                    button.innerHTML = "Dark Mode";
+                    body.style.backgroundImage = "url('assets/img/domeblur-dark.jpg')";
+                }
+            }
+        </script>
+    </body>
+</html>
